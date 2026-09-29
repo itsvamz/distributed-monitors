@@ -1,0 +1,22 @@
+30 seeds, 400 runs each (200 clean / 200 harmful), cap=5%
+
+Attacker success rate (mean over seeds; lower is better for the defender)
+rule           naive         stealthy      judge_injecti delayed_memor low_and_slow  FPR
+best_single    0.04          0.85          0.34          0.95          0.89          0.049
+or_all         0.00          0.85          0.34          0.00          0.89          0.049
+or_cusum       0.00          0.74          0.52          0.00          0.86          0.049
+majority_2of4  0.00          1.00          1.00          0.79          1.00          0.000
+cascade        0.00          1.00          1.00          0.00          1.00          0.000
+
+Security value (equilibrium attacker success): 0.854  [95% CI 0.832-0.875]
+Best fixed rule worst case:                    0.855  [95% CI 0.833-0.876]
+Gain from randomizing rules:                   0.001  [95% CI 0.000-0.003]
+Attacker best responses (count over seeds): {'stealthy': 7, 'low_and_slow': 28, 'delayed_memory': 6}
+Average defender mix: {'best_single': 0.25, 'or_all': 0.04, 'or_cusum': 0.71, 'majority_2of4': 0.0, 'cascade': 0.0}
+
+Retry curves (mean):
+  forgetful {1: 0.854, 2: 0.975, 5: 1.0, 10: 1.0}
+  sharing {1: 0.854, 2: 0.914, 5: 0.942, 10: 0.945}
+
+Random-alarm baseline lead time: -8.29 steps
+Elapsed 3.1s
