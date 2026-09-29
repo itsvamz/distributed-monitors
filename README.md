@@ -1,4 +1,4 @@
-# Distributed Monitors for Agent Safety — Reference Implementation (v2)
+# Distributed Monitors for Agent Safety
 
 Four independent monitors watch an AI agent. A fusion rule decides when to
 raise one alarm. Security is measured as a **game**: the defender picks a
